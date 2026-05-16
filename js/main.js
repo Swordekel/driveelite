@@ -2,14 +2,14 @@
 const cars = [
   { id: 1, name: "Toyota Avanza", trim: "1.5 G CVT", tag: "suv_mpv", tl: "MPV", hp: "106", zero: "12.5s", trans: "CVT", seats: "7", price: "450.000", pn: 450000, img: "pictcar/TOYOTA%20AVANZA.jpeg", hot: true, rat: 4.8, revs: 142 },
   { id: 2, name: "Daihatsu Xenia", trim: "1.5 R CVT", tag: "suv_mpv", tl: "MPV", hp: "106", zero: "12.5s", trans: "CVT", seats: "7", price: "450.000", pn: 450000, img: "pictcar/DAIHATSU%20XENIA.jpeg", hot: false, rat: 4.7, revs: 89 },
-  { id: 3, name: "Toyota Innova Reborn", trim: "2.4 V Diesel", tag: "suv_mpv", tl: "MPV", hp: "149", zero: "11.2s", trans: "Auto", seats: "7", price: "800.000", pn: 800000, img: "pictcar/TOYOTA%20INNOVA%20REBORN.jpeg", hot: true, rat: 4.9, revs: 215 },
-  { id: 4, name: "Toyota Innova Zenix", trim: "2.0 Q Hybrid", tag: "suv_mpv", tl: "MPV", hp: "186", zero: "9.5s", trans: "e-CVT", seats: "7", price: "1.200.000", pn: 1200000, img: "pictcar/TOYOTA%20INNOVA%20ZENIX.jpeg", hot: true, rat: 5.0, revs: 134 },
-  { id: 5, name: "Toyota Alphard", trim: "2.5 G AT", tag: "suv_mpv", tl: "Luxury MPV", hp: "180", zero: "10.5s", trans: "CVT", seats: "7", price: "2.500.000", pn: 2500000, img: "pictcar/TOYOTA%20ALPHARD.jpeg", hot: true, rat: 4.9, revs: 342 },
+  { id: 3, name: "Toyota Innova Reborn", trim: "2.4 V Diesel", tag: "suv_mpv", tl: "MPV", hp: "149", zero: "11.2s", trans: "Auto", seats: "7", price: "700.000", pn: 700000, img: "pictcar/TOYOTA%20INNOVA%20REBORN.jpeg", hot: true, rat: 4.9, revs: 215 },
+  { id: 4, name: "Toyota Innova Zenix", trim: "2.0 Q Hybrid", tag: "suv_mpv", tl: "MPV", hp: "186", zero: "9.5s", trans: "e-CVT", seats: "7", price: "1.500.000", pn: 1500000, img: "pictcar/TOYOTA%20INNOVA%20ZENIX.jpeg", hot: true, rat: 5.0, revs: 134 },
+  { id: 5, name: "Toyota Alphard", trim: "2.5 G AT", tag: "suv_mpv", tl: "Luxury MPV", hp: "180", zero: "10.5s", trans: "CVT", seats: "7", price: "1.700.000", pn: 1700000, img: "pictcar/TOYOTA%20ALPHARD.jpeg", hot: true, rat: 4.9, revs: 342 },
   { id: 6, name: "Toyota Fortuner", trim: "2.8 VRZ Diesel", tag: "suv_mpv", tl: "SUV", hp: "201", zero: "10.2s", trans: "Auto", seats: "7", price: "1.500.000", pn: 1500000, img: "pictcar/TOYOTA%20FORTUNER.jpeg", hot: false, rat: 4.8, revs: 188 },
-  { id: 7, name: "Toyota Hiace", trim: "Commuter", tag: "mini_bus", tl: "Mini Bus", hp: "136", zero: "-", trans: "Manual", seats: "15", price: "1.400.000", pn: 1400000, img: "pictcar/TOYOTA%20HIACE.jpeg", hot: true, rat: 4.7, revs: 92 },
-  { id: 8, name: "Isuzu Elf", trim: "Long NLR", tag: "mini_bus", tl: "Mini Bus", hp: "100", zero: "-", trans: "Manual", seats: "19", price: "1.600.000", pn: 1600000, img: "pictcar/ISUZU%20ELF.jpeg", hot: false, rat: 4.6, revs: 55 },
+  { id: 7, name: "Toyota Hiace", trim: "Commuter", tag: "mini_bus", tl: "Mini Bus", hp: "136", zero: "-", trans: "Manual", seats: "15", price: "1.800.000", pn: 1800000, img: "pictcar/TOYOTA%20HIACE.jpeg", hot: true, rat: 4.7, revs: 92 },
+  { id: 8, name: "Isuzu Elf", trim: "Long NLR", tag: "mini_bus", tl: "Mini Bus", hp: "100", zero: "-", trans: "Manual", seats: "19", price: "1.800.000", pn: 1800000, img: "pictcar/ISUZU%20ELF.jpeg", hot: false, rat: 4.6, revs: 55 },
   { id: 9, name: "Medium Bus", trim: "Pariwisata", tag: "medium_bus", tl: "Bus", hp: "260", zero: "-", trans: "Manual", seats: "31", price: "2.500.000", pn: 2500000, img: "pictcar/MEDIUM%20BUS.jpeg", hot: false, rat: 4.8, revs: 112 },
-  { id: 10, name: "Big Bus", trim: "Pariwisata SHD", tag: "big_bus", tl: "Bus", hp: "380", zero: "-", trans: "Manual", seats: "59", price: "3.800.000", pn: 3800000, img: "pictcar/BIG%20BUS.jpeg", hot: false, rat: 4.9, revs: 87 }
+  { id: 10, name: "Big Bus", trim: "Pariwisata SHD", tag: "big_bus", tl: "Bus", hp: "380", zero: "-", trans: "Manual", seats: "59", price: "3.500.000", pn: 3500000, img: "pictcar/BIG%20BUS.jpeg", hot: false, rat: 4.9, revs: 87 }
 ];
 
 const STAR_SVG = `<svg viewBox="0 0 24 24" fill="#FFD34E" width="11" height="11"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
