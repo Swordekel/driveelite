@@ -59,7 +59,7 @@ function render(filter) {
           <div class="sp"><span class="spv">${c.seats}</span><span class="spk">Kursi</span></div>
         </div>
         <div class="cfoot">
-          <div><div class="cpv">Rp ${c.price}</div><div class="cpp">per hari · inkl. asuransi</div></div>
+          <div><div class="cpv">Rp ${c.price}</div></div>
           <button class="cbtn" onclick="event.stopPropagation();openMod(${c.id})">Booking via WA</button>
         </div>
       </div>
@@ -98,9 +98,8 @@ function calcP() {
   if (!curCar) return;
   const s = document.getElementById('ms').value, e = document.getElementById('me').value;
   if (s && e) {
-    const days = Math.max(1, Math.round((new Date(e) - new Date(s)) / 86400000));
-    document.getElementById('mprice').textContent = 'Rp ' + (curCar.pn * days).toLocaleString('id-ID');
-    document.getElementById('mdays').textContent = days + ' hari · inkl. asuransi & BBM';
+    document.getElementById('mprice').textContent = 'Rp ' + (curCar.pn).toLocaleString('id-ID');
+    document.getElementById('mdays').textContent = '';
   }
 }
 function confirmBooking() {
@@ -111,9 +110,8 @@ function confirmBooking() {
   const kota = document.querySelector('#mov select')?.value || '';
   const sd = document.getElementById('ms')?.value || '';
   const ed = document.getElementById('me')?.value || '';
-  const days = sd && ed ? Math.max(1, Math.round((new Date(ed) - new Date(sd)) / 86400000)) : 1;
-  const total = (curCar.pn * days).toLocaleString('id-ID');
-  const msg = `Halo TWHRENTCAR, saya ingin booking:%0A%0A🚗 *${curCar.name} ${curCar.trim}*%0A📅 Tanggal: ${sd} s/d ${ed} (${days} hari)%0A📍 Kota Pickup: ${kota}%0A🏨 Lokasi Antar: ${loc}%0A👤 Nama: ${nm}%0A📱 No. HP: ${ph}%0A💰 Total Estimasi: Rp ${total}%0A%0AMohon konfirmasi ketersediaan. Terima kasih!`;
+  const total = (curCar.pn).toLocaleString('id-ID');
+  const msg = `Halo TWHRENTCAR, saya ingin booking:%0A%0A🚗 *${curCar.name} ${curCar.trim}*%0A📅 Tanggal: ${sd} s/d ${ed}%0A📍 Kota Pickup: ${kota}%0A🏨 Lokasi Antar: ${loc}%0A👤 Nama: ${nm}%0A📱 No. HP: ${ph}%0A💰 Harga per Hari: Rp ${total}%0A%0AMohon konfirmasi ketersediaan. Terima kasih!`;
   closeMod();
   window.open('https://wa.me/6281290608190?text=' + msg, '_blank');
 }
@@ -286,7 +284,7 @@ function cycleHeroImage() {
       heroImg.src = car.img;
       heroImg.alt = car.name;
       heroName.textContent = car.name;
-      heroDesc.textContent = `${car.trim} · ${car.seats} Kursi · Mulai Rp ${car.price}/hari`;
+      heroDesc.textContent = `${car.trim} · ${car.seats} Kursi · Mulai Rp ${car.price}`;
       // Fade in
       heroImg.style.opacity = 1;
     }, 500);
