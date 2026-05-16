@@ -18,10 +18,26 @@ const FALLBACK='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=6
 
 function tagCls(t){return{sports:'s',suv:'u',luxury:'l',electric:'e',hyper:'h'}[t]||'u'}
 
+const favs = new Set();
+function toggleFav(id, btn) {
+  if (favs.has(id)) {
+    favs.delete(id);
+    btn.innerHTML = HEART_OFF;
+    btn.classList.remove('active');
+  } else {
+    favs.add(id);
+    btn.innerHTML = HEART_ON;
+    btn.classList.add('active', 'animate');
+    setTimeout(() => btn.classList.remove('animate'), 300);
+  }
+}
+
 function render(filter){
   const g=document.getElementById('cgrid');
   const list=filter==='all'?cars:cars.filter(c=>c.tag===filter);
-  g.innerHTML=list.map(c=>`
+  g.innerHTML=list.map(c=>{
+    const isFav = favs.has(c.id);
+    return `
     <div class="cc${c.hot?' hot':''}" onclick="openMod(${c.id})">
       <div class="cc-img-wrap">
         <div class="cc-img-top"></div>
@@ -31,7 +47,7 @@ function render(filter){
       <div class="cc-body">
         <div class="cc-top">
           <span class="tag ${tagCls(c.tag)}">${c.tl}</span>
-          <button class="fav-btn" onclick="event.stopPropagation();this.innerHTML=this.innerHTML.includes('none')?'${HEART_ON}':'${HEART_OFF}'" title="Favorit">${HEART_OFF}</button>
+          <button class="fav-btn${isFav?' active':''}" onclick="event.stopPropagation();toggleFav(${c.id},this)" title="Favorit">${isFav?HEART_ON:HEART_OFF}</button>
         </div>
         <div class="rat"><div class="rat-stars">${STAR_SVG.repeat(5)}</div>${c.rat} (${c.revs} ulasan)</div>
         <div class="cname">${c.name}</div>
@@ -47,7 +63,8 @@ function render(filter){
           <button class="cbtn" onclick="event.stopPropagation();openMod(${c.id})">Booking via WA</button>
         </div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function fc(f,btn){

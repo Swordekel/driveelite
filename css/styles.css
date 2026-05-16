@@ -112,8 +112,11 @@ section{padding:92px 60px}
 .tag.l{color:#FFD34E;border-color:rgba(255,211,78,.22);background:rgba(255,211,78,.06)}
 .tag.e{color:#64CAFF;border-color:rgba(100,202,255,.22);background:rgba(100,202,255,.06)}
 .tag.h{color:#FF8C42;border-color:rgba(255,140,66,.22);background:rgba(255,140,66,.06)}
-.fav-btn{background:transparent;border:none;cursor:pointer;color:var(--gr);transition:.2s;padding:2px;line-height:0}
+.fav-btn{background:transparent;border:none;cursor:pointer;color:var(--gr);transition:.2s;padding:2px;line-height:0;transform-origin:center}
 .fav-btn:hover svg path{fill:#FF6B6B;stroke:#FF6B6B}
+.fav-btn.active svg path{fill:#FF6B6B;stroke:#FF6B6B}
+.fav-btn.animate svg{animation:heartPop .3s ease forwards}
+@keyframes heartPop{0%{transform:scale(1)}50%{transform:scale(1.35)}100%{transform:scale(1)}}
 .rat{display:flex;align-items:center;gap:5px;font-size:10.5px;color:var(--gr2);margin-bottom:8px}
 .rat-stars{display:flex;gap:1px}
 .rat-stars svg{width:11px;height:11px}
