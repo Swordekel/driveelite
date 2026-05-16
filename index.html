@@ -1,458 +1,906 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DriveElite — Premium Car Rental Indonesia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THW Car Rental — Premium Car Rental Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="png" href="favicon.png">
 </head>
+
 <body>
 
-<!-- ══ NAV ══ -->
-<nav id="mnav">
-  <a class="logo" href="#">DRIVE<em>ELITE</em></a>
-  <ul class="nav-links">
-    <li><a href="#fleet">Fleet</a></li>
-    <li><a href="#how">Cara Sewa</a></li>
-    <li><a href="#why">Keunggulan</a></li>
-    <li><a href="#locations">Lokasi</a></li>
-    <li><a href="#blog">Blog</a></li>
-  </ul>
-  <div class="nav-r">
-    <a class="nbtn solid" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:7px">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-      Sewa Sekarang
-    </a>
-    <button class="ham" onclick="toggleMenu()" id="ham-btn" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- Mobile Drawer -->
-<div class="mnav-drawer" id="mnav-drawer">
-  <a href="#fleet" onclick="closeMenu()">Fleet</a>
-  <a href="#how" onclick="closeMenu()">Cara Sewa</a>
-  <a href="#why" onclick="closeMenu()">Keunggulan</a>
-  <a href="#locations" onclick="closeMenu()">Lokasi</a>
-  <a href="#blog" onclick="closeMenu()">Blog</a>
-  <a href="#contact" onclick="closeMenu()">Kontak</a>
-  <a class="nbtn solid" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil" target="_blank" rel="noopener" style="text-decoration:none;text-align:center;display:block" onclick="closeMenu()">Sewa Sekarang via WhatsApp</a>
-</div>
-
-<!-- ══ HERO ══ -->
-<div class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="badge"><span class="bdot"></span>200+ Kendaraan Premium Tersedia</div>
-      <h1 class="hero-h">SEWA<br><span class="gc">MOBIL</span><br><span class="oc">IMPIAN</span></h1>
-      <p class="hdesc">Pengalaman rental mobil premium di Indonesia. Porsche, BMW, Range Rover, Tesla — siap antar ke lokasi Anda, tanpa biaya tersembunyi.</p>
-      <div class="hbtns">
-        <button class="hbtn solid" onclick="s2('fleet')">Lihat Armada</button>
-        <button class="hbtn out" onclick="s2('how')">Cara Kerja</button>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><div class="kn">200<em>+</em></div><div class="kl">Kendaraan</div></div>
-        <div class="kpi"><div class="kn">40<em>+</em></div><div class="kl">Kota</div></div>
-        <div class="kpi"><div class="kn">4.9<em>★</em></div><div class="kl">Rating</div></div>
-        <div class="kpi"><div class="kn">12K<em>+</em></div><div class="kl">Pelanggan</div></div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <img class="hero-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85&auto=format&fit=crop" alt="Porsche 911" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80&auto=format&fit=crop'">
-      <div class="hero-ov"></div>
-      <div class="hero-ov-b"></div>
-      <div class="hcar-badge">
-        <div class="hbl">Featured Car</div>
-        <div class="hbv">Porsche 911</div>
-        <div class="hbs">Carrera 4S · 450 HP · Mulai Rp 3.5jt/hari</div>
-      </div>
-    </div>
-  </div>
-  <!-- BOOKING BAR -->
-  <div class="bbar">
-    <div class="bf">
-      <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>Kota Pickup</label>
-      <select><option>Jakarta Selatan</option><option>Jakarta Barat</option><option>Jakarta Pusat</option><option>Bali – Denpasar</option><option>Surabaya</option><option>Bandung</option><option>Medan</option></select>
-    </div>
-    <div class="bf">
-      <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Tanggal Mulai</label>
-      <input type="date" id="d1">
-    </div>
-    <div class="bf">
-      <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Tanggal Selesai</label>
-      <input type="date" id="d2">
-    </div>
-    <div class="bf">
-      <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="m16 8 5 0 3 6v3h-8V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Kategori</label>
-      <select><option>Semua Tipe</option><option>Sports Car</option><option>Luxury Sedan</option><option>SUV Premium</option><option>Electric</option><option>Hypercar</option></select>
-    </div>
-    <a class="bgo" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20info%20sewa%20mobil" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;justify-content:center">CARI →</a>
-  </div>
-</div>
-
-<!-- MARQUEE -->
-<div class="mq">
-  <div class="mq-inner">
-    <span class="mi"><span class="mdot"></span>Porsche 911 GT3</span><span class="mi"><span class="mdot"></span>BMW M4 Competition</span><span class="mi"><span class="mdot"></span>Range Rover Sport</span><span class="mi"><span class="mdot"></span>Mercedes AMG GT</span><span class="mi"><span class="mdot"></span>Tesla Model S Plaid</span><span class="mi"><span class="mdot"></span>Lamborghini Urus</span><span class="mi"><span class="mdot"></span>Audi RS7 Sportback</span><span class="mi"><span class="mdot"></span>Ferrari Roma</span><span class="mi"><span class="mdot"></span>Bentley Continental GT</span><span class="mi"><span class="mdot"></span>McLaren 720S</span>
-    <span class="mi"><span class="mdot"></span>Porsche 911 GT3</span><span class="mi"><span class="mdot"></span>BMW M4 Competition</span><span class="mi"><span class="mdot"></span>Range Rover Sport</span><span class="mi"><span class="mdot"></span>Mercedes AMG GT</span><span class="mi"><span class="mdot"></span>Tesla Model S Plaid</span><span class="mi"><span class="mdot"></span>Lamborghini Urus</span><span class="mi"><span class="mdot"></span>Audi RS7 Sportback</span><span class="mi"><span class="mdot"></span>Ferrari Roma</span><span class="mi"><span class="mdot"></span>Bentley Continental GT</span><span class="mi"><span class="mdot"></span>McLaren 720S</span>
-  </div>
-</div>
-
-<!-- ══ FLEET ══ -->
-<section id="fleet">
-  <div class="ey">Armada Kami</div>
-  <h2 class="st">PILIH <span class="ac">KENDARAAN</span><br><span class="dim">TERBAIK ANDA</span></h2>
-  <div class="filters">
-    <button class="ft on" onclick="fc('all',this)">Semua</button>
-    <button class="ft" onclick="fc('sports',this)">Sports</button>
-    <button class="ft" onclick="fc('suv',this)">SUV</button>
-    <button class="ft" onclick="fc('luxury',this)">Luxury</button>
-    <button class="ft" onclick="fc('electric',this)">Electric</button>
-    <button class="ft" onclick="fc('hyper',this)">Hypercar</button>
-  </div>
-  <div class="cgrid" id="cgrid"></div>
-  <div class="load-wrap"><button class="loadbtn" onclick="showToast('200+ armada lengkap tersedia di aplikasi kami!')">Tampilkan Lebih Banyak</button></div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══ HOW ══ -->
-<section id="how">
-  <div class="ey">Proses Mudah</div>
-  <h2 class="st">4 LANGKAH<br><span class="ac">MUDAH SEWA</span></h2>
-  <div class="howgrid">
-    <div class="hw">
-      <div class="hwn">01</div>
-      <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-      <div class="hwt">Pilih Kendaraan</div>
-      <p class="hwd">Browse 200+ koleksi mobil premium. Filter berdasarkan tipe, kapasitas, harga, atau tanggal ketersediaan real-time.</p>
-    </div>
-    <div class="hw">
-      <div class="hwn">02</div>
-      <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-      <div class="hwt">Isi Detail Booking</div>
-      <p class="hwd">Tentukan tanggal, lokasi pickup &amp; dropoff. Upload KTP dan SIM digital. Proses penuh online — tidak perlu antri.</p>
-    </div>
-    <div class="hw">
-      <div class="hwn">03</div>
-      <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-      <div class="hwt">Bayar Aman</div>
-      <p class="hwd">Transfer bank, kartu kredit, GoPay, OVO, DANA. Konfirmasi instan. Deposit refundable 100% setelah pengembalian.</p>
-    </div>
-    <div class="hw">
-      <div class="hwn">04</div>
-      <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="m16 8 5 0 3 6v3h-8V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-      <div class="hwt">Ambil &amp; Nikmati</div>
-      <p class="hwd">Kendaraan diantar ke hotel/bandara atau ambil di garasi kami. Kondisi prima, bahan bakar penuh, siap jalan.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══ WHY ══ -->
-<section id="why">
-  <div class="why-layout">
-    <div>
-      <div class="ey">Keunggulan Kami</div>
-      <h2 class="st" style="margin-bottom:30px">BEDA DARI<br><span class="ac">YANG LAIN</span></h2>
-      <div class="flist">
-        <div class="fi">
-          <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><div class="ft2">Asuransi Comprehensive</div><p class="fd2">Semua kendaraan dilindungi asuransi all-risk. Tidak perlu kuatir dengan risiko tak terduga selama perjalanan Anda.</p></div>
-        </div>
-        <div class="fi">
-          <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
-          <div><div class="ft2">Concierge 24/7</div><p class="fd2">Tim support kami siap 24 jam, 7 hari seminggu via WhatsApp, telepon, atau live chat — termasuk bantuan darurat di seluruh Indonesia.</p></div>
-        </div>
-        <div class="fi">
-          <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><polyline points="9,11 12,14 22,4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <div><div class="ft2">Kondisi Showroom</div><p class="fd2">Setiap kendaraan di-detail sebelum diserahkan. Usia armada maksimal 2 tahun, servis rutin terjadwal ketat.</p></div>
-        </div>
-        <div class="fi">
-          <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <div><div class="ft2">Harga Transparan</div><p class="fd2">Harga yang Anda lihat adalah harga final. Tanpa biaya tersembunyi, tanpa surcharge bahan bakar, tanpa kejutan.</p></div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="bigcard">
-        <img class="bigcard-img" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700&q=85&auto=format&fit=crop" alt="BMW M4" onerror="this.style.display='none'">
-        <div class="bigcard-body">
-          <div class="bclabel">
-            <svg viewBox="0 0 24 24" width="12" height="12" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-            Paling Populer Bulan Ini
-          </div>
-          <div class="bcname">BMW M4 Competition</div>
-          <div class="bcrow">
-            <div class="bcd"><span class="bcdv">510 HP</span><span class="bcdk">Tenaga</span></div>
-            <div class="bcd"><span class="bcdv">3.5 dtk</span><span class="bcdk">0–100 km/h</span></div>
-            <div class="bcd"><span class="bcdv" style="color:var(--g)">Rp 2.2jt</span><span class="bcdk">per hari</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="minicards">
-        <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="m16 8 5 0 3 6v3h-8V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><div class="mct">Antar-Jemput</div><div class="mcd">Hotel &amp; bandara</div></div></div>
-        <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="mct">Booking Online</div><div class="mcd">Proses 2 menit</div></div></div>
-        <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div><div><div class="mct">Keyless Entry</div><div class="mcd">Sistem digital</div></div></div>
-        <div class="mc"><div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg></div><div><div class="mct">Bensin Penuh</div><div class="mcd">Setiap unit</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATIONS -->
-<div class="divider"></div>
-<section id="locations">
-  <div class="ey">Jaringan Kami</div>
-  <h2 class="st" style="margin-bottom:12px">TERSEDIA DI<br><span class="ac">7 KOTA BESAR</span></h2>
-  <p style="color:var(--gr);font-size:14px;margin-bottom:32px">Pickup &amp; dropoff tersedia di semua lokasi. Antar ke hotel &amp; bandara tanpa biaya tambahan.</p>
-  <div class="locgrid">
-    <div class="lc on"><div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div><div class="lct">Jakarta</div><div class="lcc">86 Kendaraan</div><div class="ldot"></div></div>
-    <div class="lc"><div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div class="lct">Bali</div><div class="lcc">54 Kendaraan</div></div>
-    <div class="lc"><div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div class="lct">Surabaya</div><div class="lcc">32 Kendaraan</div></div>
-    <div class="lc"><div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div class="lct">Bandung</div><div class="lcc">24 Kendaraan</div></div>
-    <div class="lc"><div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div class="lct">Medan</div><div class="lcc">18 Kendaraan</div></div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="tsec" id="testimonials">
-  <div class="ey">Yang Mereka Bilang</div>
-  <h2 class="st" style="margin-bottom:38px">12.000+ PELANGGAN<br><span class="ac">PUAS</span></h2>
-  <div class="tgrid">
-    <div class="tc"><div class="tq">"</div><p class="tb">Sewa Porsche 911 untuk anniversary, pengalaman luar biasa! Mobilnya bersih banget, proses booking simple, dan driver-nya tepat waktu. Worth every penny!</p><div class="tm"><div class="tav">RH</div><div><div class="tn">Rafi Hidayat</div><div class="tr">Jakarta Selatan · Porsche 911</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-    <div class="tc"><div class="tq">"</div><p class="tb">Sudah langganan DriveElite 2 tahun buat acara pernikahan klien. Armada selalu prima, tidak pernah mengecewakan. Harga kompetitif untuk kualitas sebagus ini.</p><div class="tm"><div class="tav">SA</div><div><div class="tn">Siti Amalia</div><div class="tr">Bandung · Range Rover Sport</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-    <div class="tc"><div class="tq">"</div><p class="tb">Tesla Model S Plaid kenceng banget! CS 24 jam responsif, booking via website gampang. Paling profesional yang pernah saya coba di Indonesia.</p><div class="tm"><div class="tav">BP</div><div><div class="tn">Budi Prasetyo</div><div class="tr">Surabaya · Tesla Model S</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-    <div class="tc"><div class="tq">"</div><p class="tb">Antar ke Bandara Soetta jam 3 pagi, tidak ada biaya tambahan. Range Rover putih kondisi mulus. Sudah rekomendasiin ke semua kolega di kantor saya.</p><div class="tm"><div class="tav">DK</div><div><div class="tn">Dian Kusuma</div><div class="tr">Jakarta · Range Rover</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-    <div class="tc"><div class="tq">"</div><p class="tb">Liburan di Bali sewa Lamborghini Urus 3 hari. Foto di Uluwatu kece banget! Staf di Bali sangat helpful dan responsif. Pasti balik lagi bulan depan.</p><div class="tm"><div class="tav">MF</div><div><div class="tn">Muhammad Fauzi</div><div class="tr">Bali · Lamborghini Urus</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-    <div class="tc"><div class="tq">"</div><p class="tb">Verifikasi KTP dan SIM cuma 10 menit via WhatsApp. Deposit kembali 2 hari setelah pengembalian. Paling profesional dari semua rental yang pernah saya coba.</p><div class="tm"><div class="tav">NW</div><div><div class="tn">Natasha Wijaya</div><div class="tr">Jakarta · Mercedes AMG GT</div><div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg viewBox="0 0 24 24" fill="#FFD34E"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div></div></div></div>
-  </div>
-</section>
-
-<!-- ══ BLOG ══ -->
-<section id="blog">
-  <div class="ey">Tips &amp; Insight</div>
-  <h2 class="st">DARI BLOG<br><span class="ac">DRIVEELITE</span></h2>
-  <div class="blog-grid">
-    <div class="blog-card" onclick="openBlog(0)">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80&auto=format&fit=crop" alt="Blog 1" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
-        <div class="blog-cat">Tips Sewa</div>
-      </div>
-      <div class="blog-body">
-        <div class="blog-meta">
-          <span>12 Jan 2025</span>
-          <span class="blog-meta-dot"></span>
-          <span>5 menit baca</span>
-        </div>
-        <div class="blog-title">5 Tips Memilih Mobil Sport untuk Perjalanan Bisnis</div>
-        <p class="blog-excerpt">Memilih mobil yang tepat untuk perjalanan bisnis bukan hanya soal gaya — kenyamanan, efisiensi, dan kesan pertama kepada klien juga sangat menentukan.</p>
-        <div class="blog-read" onclick="event.stopPropagation();openBlog(0)">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></div>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openBlog(1)">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Blog 2" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
-        <div class="blog-cat">Review</div>
-      </div>
-      <div class="blog-body">
-        <div class="blog-meta">
-          <span>8 Jan 2025</span>
-          <span class="blog-meta-dot"></span>
-          <span>7 menit baca</span>
-        </div>
-        <div class="blog-title">Review Lengkap: Lamborghini Urus di Jalanan Bali</div>
-        <p class="blog-excerpt">Bagaimana rasanya menjelajahi Bali dari Seminyak hingga Uluwatu dengan SUV supercar paling ikonik di dunia? Kami coba selama 3 hari penuh.</p>
-        <div class="blog-read" onclick="event.stopPropagation();openBlog(1)">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></div>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openBlog(2)">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80&auto=format&fit=crop" alt="Blog 3" onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
-        <div class="blog-cat">Electric</div>
-      </div>
-      <div class="blog-body">
-        <div class="blog-meta">
-          <span>3 Jan 2025</span>
-          <span class="blog-meta-dot"></span>
-          <span>6 menit baca</span>
-        </div>
-        <div class="blog-title">Mengapa Tesla Model S Plaid Jadi Pilihan Favorit 2025</div>
-        <p class="blog-excerpt">Dengan 0–100 km/h hanya 2.1 detik, Tesla Model S Plaid bukan sekadar mobil listrik — ini adalah salah satu kendaraan tercepat yang pernah ada.</p>
-        <div class="blog-read" onclick="event.stopPropagation();openBlog(2)">Baca Selengkapnya <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROMO -->
-<div class="promowrap">
-  <div class="promo">
-    <div>
-      <div class="promo-ey">Penawaran Terbatas</div>
-      <h2>SEWA 3 HARI<br>GRATIS 1 HARI</h2>
-      <p>Berlaku untuk semua armada hingga 30 Juni 2025. Gunakan kode <strong>ELITE30</strong> saat checkout.</p>
-    </div>
-    <div class="promobtns">
-      <a class="pbtn-d" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20mau%20klaim%20promo%20ELITE30" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;text-align:center">Klaim Promo</a>
-      <button class="pbtn-o">Syarat &amp; Ketentuan</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══ FOOTER ══ -->
-<footer id="contact">
-  <div class="ftop">
-    <div class="fbrand">
-      <a class="logo" href="#">DRIVE<em>ELITE</em></a>
-      <p class="fdesc">Rental mobil premium #1 di Indonesia. Armada mewah, pelayanan bintang lima, harga terjangkau.</p>
-      <!-- Contact Info -->
-      <div class="fcontact">
-        <div class="fci">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/></svg>
-          <a href="tel:08111688303">0811 1688 303</a>
-        </div>
-        <div class="fci">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <span>Jl. Raya Kebun Jeruk No. 10,<br>Kebun Jeruk, Jakarta Barat 11530</span>
-        </div>
-        <div class="fci">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-          <span>Senin–Sabtu: 08.00–20.00<br>Minggu: 09.00–17.00</span>
-        </div>
-      </div>
-      <!-- Social Icons -->
-      <div class="fsocials">
-        <!-- Instagram -->
-        <a class="fsoc" href="#" title="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <!-- Facebook -->
-        <a class="fsoc" href="#" title="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <!-- TikTok -->
-        <a class="fsoc" href="#" title="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-        </a>
-        <!-- YouTube -->
-        <a class="fsoc" href="#" title="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="var(--k)"/></svg>
-        </a>
-        <!-- WhatsApp -->
-        <a class="fsoc" href="https://wa.me/628111688303" title="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="fcol">
-      <h4>Armada</h4>
-      <ul>
-        <li><a href="#">Sports Car</a></li>
-        <li><a href="#">Luxury Sedan</a></li>
-        <li><a href="#">SUV Premium</a></li>
-        <li><a href="#">Electric Car</a></li>
-        <li><a href="#">Hypercar</a></li>
-        <li><a href="#">Van &amp; MPV</a></li>
-      </ul>
-    </div>
-    <div class="fcol">
-      <h4>Layanan</h4>
-      <ul>
-        <li><a href="#">Wedding Car</a></li>
-        <li><a href="#">Corporate Rental</a></li>
-        <li><a href="#">Airport Transfer</a></li>
-        <li><a href="#">Wisata Bali</a></li>
-        <li><a href="#">Antar Kota</a></li>
-        <li><a href="#">Sewa Mingguan</a></li>
-      </ul>
-    </div>
-    <div class="fcol">
-      <h4>Bantuan</h4>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Kebijakan Sewa</a></li>
-        <li><a href="#">Asuransi</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Kontak Kami</a></li>
-        <li><a href="https://wa.me/628111688303">WhatsApp CS</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fbot">
-    <span>© 2025 DriveElite Indonesia. Hak cipta dilindungi.</span>
-    <div class="fpay">
-      <span class="fp">BCA</span><span class="fp">MANDIRI</span><span class="fp">VISA</span><span class="fp">MASTERCARD</span><span class="fp">GOPAY</span><span class="fp">OVO</span><span class="fp">DANA</span>
-    </div>
-    <div class="fleg">
-      <a href="#">Privasi</a><a href="#">Syarat</a><a href="#">Cookie</a>
-    </div>
-  </div>
-</footer>
-
-
-<!-- BLOG MODAL -->
-<div class="blog-mov" id="blog-mov" onclick="if(event.target===this)closeBlog()">
-  <div class="blog-modal" id="blog-modal-inner">
-    <button class="blog-modal-close" onclick="closeBlog()">✕</button>
-    <img id="bm-img" class="blog-modal-hero" src="" alt="">
-    <div class="blog-modal-body">
-      <div id="bm-cat" class="blog-modal-cat"></div>
-      <h2 id="bm-title" class="blog-modal-title"></h2>
-      <div class="blog-modal-meta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <span id="bm-date"></span>
-        <span>·</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        <span id="bm-read"></span>
-        <span>·</span>
-        <span id="bm-author"></span>
-      </div>
-      <div id="bm-content" class="blog-modal-content"></div>
-      <a id="bm-cta" class="blog-modal-cta" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil%20setelah%20membaca%20artikel%20di%20blog%20Anda" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        Sewa Mobil Sekarang
+  <!-- ══ NAV ══ -->
+  <nav id="mnav">
+    <a class="logo" href="#">TWHcar<em>RENT</em></a>
+    <ul class="nav-links">
+      <li><a href="#fleet">Fleet</a></li>
+      <li><a href="#how">Cara Sewa</a></li>
+      <li><a href="#why">Keunggulan</a></li>
+      <li><a href="#locations">Lokasi</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+    <div class="nav-r">
+      <a class="nbtn solid" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil"
+        target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:7px">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+        Sewa Sekarang
       </a>
+      <button class="ham" onclick="toggleMenu()" id="ham-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mnav-drawer" id="mnav-drawer">
+    <a href="#fleet" onclick="closeMenu()">Fleet</a>
+    <a href="#how" onclick="closeMenu()">Cara Sewa</a>
+    <a href="#why" onclick="closeMenu()">Keunggulan</a>
+    <a href="#locations" onclick="closeMenu()">Lokasi</a>
+    <a href="#blog" onclick="closeMenu()">Blog</a>
+    <a href="#contact" onclick="closeMenu()">Kontak</a>
+    <a class="nbtn solid" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil"
+      target="_blank" rel="noopener" style="text-decoration:none;text-align:center;display:block"
+      onclick="closeMenu()">Sewa Sekarang via WhatsApp</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <div class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="badge"><span class="bdot"></span>200+ Kendaraan Premium Tersedia</div>
+        <h1 class="hero-h">SEWA<br><span class="gc">MOBIL</span><br><span class="oc">IMPIAN</span></h1>
+        <p class="hdesc">Pengalaman rental mobil premium di Indonesia. Porsche, BMW, Range Rover, Tesla — siap antar ke
+          lokasi Anda, tanpa biaya tersembunyi.</p>
+        <div class="hbtns">
+          <button class="hbtn solid" onclick="s2('fleet')">Lihat Armada</button>
+          <button class="hbtn out" onclick="s2('how')">Cara Kerja</button>
+        </div>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="kn">200<em>+</em></div>
+            <div class="kl">Kendaraan</div>
+          </div>
+          <div class="kpi">
+            <div class="kn">40<em>+</em></div>
+            <div class="kl">Kota</div>
+          </div>
+          <div class="kpi">
+            <div class="kn">4.9<em>★</em></div>
+            <div class="kl">Rating</div>
+          </div>
+          <div class="kpi">
+            <div class="kn">12K<em>+</em></div>
+            <div class="kl">Pelanggan</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img class="hero-img"
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85&auto=format&fit=crop"
+          alt="Porsche 911"
+          onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80&auto=format&fit=crop'">
+        <div class="hero-ov"></div>
+        <div class="hero-ov-b"></div>
+        <div class="hcar-badge">
+          <div class="hbl">Featured Car</div>
+          <div class="hbv">Porsche 911</div>
+          <div class="hbs">Carrera 4S · 450 HP · Mulai Rp 3.5jt/hari</div>
+        </div>
+      </div>
+    </div>
+    <!-- BOOKING BAR -->
+    <div class="bbar">
+      <div class="bf">
+        <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>Kota Pickup</label>
+        <select>
+          <option>Jakarta Selatan</option>
+          <option>Jakarta Barat</option>
+          <option>Jakarta Pusat</option>
+          <option>Bali – Denpasar</option>
+          <option>Surabaya</option>
+          <option>Bandung</option>
+          <option>Medan</option>
+        </select>
+      </div>
+      <div class="bf">
+        <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>Tanggal Mulai</label>
+        <input type="date" id="d1">
+      </div>
+      <div class="bf">
+        <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>Tanggal Selesai</label>
+        <input type="date" id="d2">
+      </div>
+      <div class="bf">
+        <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13" rx="1" />
+            <path d="m16 8 5 0 3 6v3h-8V8z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>Kategori</label>
+        <select>
+          <option>Semua Tipe</option>
+          <option>Sports Car</option>
+          <option>Luxury Sedan</option>
+          <option>SUV Premium</option>
+          <option>Electric</option>
+          <option>Hypercar</option>
+        </select>
+      </div>
+      <a class="bgo" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20info%20sewa%20mobil"
+        target="_blank" rel="noopener"
+        style="text-decoration:none;display:flex;align-items:center;justify-content:center">CARI →</a>
     </div>
   </div>
-</div>
 
-<!-- MODAL -->
-<div class="mov" id="mov" onclick="if(event.target===this)closeMod()">
-  <div class="modal">
-    <div class="mhead">
-      <h3 id="mtitle">Booking Kendaraan</h3>
-      <button class="mcls" onclick="closeMod()">✕</button>
-    </div>
-    <div class="mbody">
-      <img id="m-car-img" class="m-car-img" src="" alt="">
-      <div class="mspgrid" id="mspecs"></div>
-      <div class="mform">
-        <div class="mff"><label>Kota Pickup</label><select><option>Jakarta Selatan</option><option>Jakarta Barat</option><option>Jakarta Pusat</option><option>Bali – Denpasar</option><option>Surabaya</option><option>Bandung</option></select></div>
-        <div class="mff"><label>Tanggal Mulai</label><input type="date" id="ms" onchange="calcP()"></div>
-        <div class="mff"><label>Tanggal Selesai</label><input type="date" id="me" onchange="calcP()"></div>
-        <div class="mff"><label>Nama Lengkap</label><input type="text" placeholder="Nama sesuai KTP"></div>
-        <div class="mff"><label>No. WhatsApp</label><input type="tel" placeholder="+62 812 xxxx xxxx"></div>
-        <div class="mff"><label>Lokasi Antar</label><input type="text" placeholder="Hotel / Bandara / Alamat"></div>
-      </div>
-      <div class="mprow">
-        <div><div class="mpl">Total Estimasi</div><div id="mdays" style="font-size:11px;color:var(--gr)">Pilih tanggal</div></div>
-        <div style="text-align:right"><div id="mprice" class="mpv">—</div><div class="mpsub">inkl. asuransi &amp; BBM</div></div>
-      </div>
-      <button class="mconfirm" onclick="confirmBooking()">KONFIRMASI BOOKING →</button>
+  <!-- MARQUEE -->
+  <div class="mq">
+    <div class="mq-inner">
+      <span class="mi"><span class="mdot"></span>Porsche 911 GT3</span><span class="mi"><span class="mdot"></span>BMW M4
+        Competition</span><span class="mi"><span class="mdot"></span>Range Rover Sport</span><span class="mi"><span
+          class="mdot"></span>Mercedes AMG GT</span><span class="mi"><span class="mdot"></span>Tesla Model S
+        Plaid</span><span class="mi"><span class="mdot"></span>Lamborghini Urus</span><span class="mi"><span
+          class="mdot"></span>Audi RS7 Sportback</span><span class="mi"><span class="mdot"></span>Ferrari
+        Roma</span><span class="mi"><span class="mdot"></span>Bentley Continental GT</span><span class="mi"><span
+          class="mdot"></span>McLaren 720S</span>
+      <span class="mi"><span class="mdot"></span>Porsche 911 GT3</span><span class="mi"><span class="mdot"></span>BMW M4
+        Competition</span><span class="mi"><span class="mdot"></span>Range Rover Sport</span><span class="mi"><span
+          class="mdot"></span>Mercedes AMG GT</span><span class="mi"><span class="mdot"></span>Tesla Model S
+        Plaid</span><span class="mi"><span class="mdot"></span>Lamborghini Urus</span><span class="mi"><span
+          class="mdot"></span>Audi RS7 Sportback</span><span class="mi"><span class="mdot"></span>Ferrari
+        Roma</span><span class="mi"><span class="mdot"></span>Bentley Continental GT</span><span class="mi"><span
+          class="mdot"></span>McLaren 720S</span>
     </div>
   </div>
-</div>
 
-<div class="toast" id="toast"></div>
-<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18,15 12,9 6,15"/></svg>
-</button>
+  <!-- ══ FLEET ══ -->
+  <section id="fleet">
+    <div class="ey">Armada Kami</div>
+    <h2 class="st">PILIH <span class="ac">KENDARAAN</span><br><span class="dim">TERBAIK ANDA</span></h2>
+    <div class="filters">
+      <button class="ft on" onclick="fc('all',this)">Semua</button>
+      <button class="ft" onclick="fc('sports',this)">Sports</button>
+      <button class="ft" onclick="fc('suv',this)">SUV</button>
+      <button class="ft" onclick="fc('luxury',this)">Luxury</button>
+      <button class="ft" onclick="fc('electric',this)">Electric</button>
+      <button class="ft" onclick="fc('hyper',this)">Hypercar</button>
+    </div>
+    <div class="cgrid" id="cgrid"></div>
+    <div class="load-wrap"><button class="loadbtn"
+        onclick="showToast('200+ armada lengkap tersedia di aplikasi kami!')">Tampilkan Lebih Banyak</button></div>
+  </section>
 
-<script src="js/main.js"></script>
+  <div class="divider"></div>
+
+  <!-- ══ HOW ══ -->
+  <section id="how">
+    <div class="ey">Proses Mudah</div>
+    <h2 class="st">4 LANGKAH<br><span class="ac">MUDAH SEWA</span></h2>
+    <div class="howgrid">
+      <div class="hw">
+        <div class="hwn">01</div>
+        <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg></div>
+        <div class="hwt">Pilih Kendaraan</div>
+        <p class="hwd">Browse 200+ koleksi mobil premium. Filter berdasarkan tipe, kapasitas, harga, atau tanggal
+          ketersediaan real-time.</p>
+      </div>
+      <div class="hw">
+        <div class="hwn">02</div>
+        <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14,2 14,8 20,8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg></div>
+        <div class="hwt">Isi Detail Booking</div>
+        <p class="hwd">Tentukan tanggal, lokasi pickup &amp; dropoff. Upload KTP dan SIM digital. Proses penuh online —
+          tidak perlu antri.</p>
+      </div>
+      <div class="hw">
+        <div class="hwn">03</div>
+        <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+            <line x1="1" y1="10" x2="23" y2="10" />
+          </svg></div>
+        <div class="hwt">Bayar Aman</div>
+        <p class="hwd">Transfer bank, kartu kredit, GoPay, OVO, DANA. Konfirmasi instan. Deposit refundable 100% setelah
+          pengembalian.</p>
+      </div>
+      <div class="hw">
+        <div class="hwn">04</div>
+        <div class="hw-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+            <rect x="1" y="3" width="15" height="13" rx="1" />
+            <path d="m16 8 5 0 3 6v3h-8V8z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg></div>
+        <div class="hwt">Ambil &amp; Nikmati</div>
+        <p class="hwd">Kendaraan diantar ke hotel/bandara atau ambil di garasi kami. Kondisi prima, bahan bakar penuh,
+          siap jalan.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ WHY ══ -->
+  <section id="why">
+    <div class="why-layout">
+      <div>
+        <div class="ey">Keunggulan Kami</div>
+        <h2 class="st" style="margin-bottom:30px">BEDA DARI<br><span class="ac">YANG LAIN</span></h2>
+        <div class="flist">
+          <div class="fi">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
+            <div>
+              <div class="ft2">Asuransi Comprehensive</div>
+              <p class="fd2">Semua kendaraan dilindungi asuransi all-risk. Tidak perlu kuatir dengan risiko tak terduga
+                selama perjalanan Anda.</p>
+            </div>
+          </div>
+          <div class="fi">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12,6 12,12 16,14" />
+              </svg></div>
+            <div>
+              <div class="ft2">Concierge 24/7</div>
+              <p class="fd2">Tim support kami siap 24 jam, 7 hari seminggu via WhatsApp, telepon, atau live chat —
+                termasuk bantuan darurat di seluruh Indonesia.</p>
+            </div>
+          </div>
+          <div class="fi">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <polyline points="9,11 12,14 22,4" />
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg></div>
+            <div>
+              <div class="ft2">Kondisi Showroom</div>
+              <p class="fd2">Setiap kendaraan di-detail sebelum diserahkan. Usia armada maksimal 2 tahun, servis rutin
+                terjadwal ketat.</p>
+            </div>
+          </div>
+          <div class="fi">
+            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg></div>
+            <div>
+              <div class="ft2">Harga Transparan</div>
+              <p class="fd2">Harga yang Anda lihat adalah harga final. Tanpa biaya tersembunyi, tanpa surcharge bahan
+                bakar, tanpa kejutan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bigcard">
+          <img class="bigcard-img"
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700&q=85&auto=format&fit=crop" alt="BMW M4"
+            onerror="this.style.display='none'">
+          <div class="bigcard-body">
+            <div class="bclabel">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg>
+              Paling Populer Bulan Ini
+            </div>
+            <div class="bcname">BMW M4 Competition</div>
+            <div class="bcrow">
+              <div class="bcd"><span class="bcdv">510 HP</span><span class="bcdk">Tenaga</span></div>
+              <div class="bcd"><span class="bcdv">3.5 dtk</span><span class="bcdk">0–100 km/h</span></div>
+              <div class="bcd"><span class="bcdv" style="color:var(--g)">Rp 2.2jt</span><span class="bcdk">per
+                  hari</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="minicards">
+          <div class="mc">
+            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <rect x="1" y="3" width="15" height="13" rx="1" />
+                <path d="m16 8 5 0 3 6v3h-8V8z" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg></div>
+            <div>
+              <div class="mct">Antar-Jemput</div>
+              <div class="mcd">Hotel &amp; bandara</div>
+            </div>
+          </div>
+          <div class="mc">
+            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg></div>
+            <div>
+              <div class="mct">Booking Online</div>
+              <div class="mcd">Proses 2 menit</div>
+            </div>
+          </div>
+          <div class="mc">
+            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <path
+                  d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+              </svg></div>
+            <div>
+              <div class="mct">Keyless Entry</div>
+              <div class="mcd">Sistem digital</div>
+            </div>
+          </div>
+          <div class="mc">
+            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
+                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+                <path d="M12 3v6" />
+              </svg></div>
+            <div>
+              <div class="mct">Bensin Penuh</div>
+              <div class="mcd">Setiap unit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <div class="divider"></div>
+  <section id="locations">
+    <div class="ey">Jaringan Kami</div>
+    <h2 class="st" style="margin-bottom:12px">TERSEDIA DI<br><span class="ac">7 KOTA BESAR</span></h2>
+    <p style="color:var(--gr);font-size:14px;margin-bottom:32px">Pickup &amp; dropoff tersedia di semua lokasi. Antar ke
+      hotel &amp; bandara tanpa biaya tambahan.</p>
+    <div class="locgrid">
+      <div class="lc on">
+        <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9,22 9,12 15,12 15,22" />
+          </svg></div>
+        <div class="lct">Jakarta</div>
+        <div class="lcc">86 Kendaraan</div>
+        <div class="ldot"></div>
+      </div>
+      <div class="lc">
+        <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg></div>
+        <div class="lct">Bali</div>
+        <div class="lcc">54 Kendaraan</div>
+      </div>
+      <div class="lc">
+        <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg></div>
+        <div class="lct">Surabaya</div>
+        <div class="lcc">32 Kendaraan</div>
+      </div>
+      <div class="lc">
+        <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg></div>
+        <div class="lct">Bandung</div>
+        <div class="lcc">24 Kendaraan</div>
+      </div>
+      <div class="lc">
+        <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gr2)" stroke-width="1.5">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg></div>
+        <div class="lct">Medan</div>
+        <div class="lcc">18 Kendaraan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section class="tsec" id="testimonials">
+    <div class="ey">Yang Mereka Bilang</div>
+    <h2 class="st" style="margin-bottom:38px">12.000+ PELANGGAN<br><span class="ac">PUAS</span></h2>
+    <div class="tgrid">
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Sewa Porsche 911 untuk anniversary, pengalaman luar biasa! Mobilnya bersih banget, proses booking
+          simple, dan driver-nya tepat waktu. Worth every penny!</p>
+        <div class="tm">
+          <div class="tav">RH</div>
+          <div>
+            <div class="tn">Rafi Hidayat</div>
+            <div class="tr">Jakarta Selatan · Porsche 911</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Sudah langganan DriveElite 2 tahun buat acara pernikahan klien. Armada selalu prima, tidak pernah
+          mengecewakan. Harga kompetitif untuk kualitas sebagus ini.</p>
+        <div class="tm">
+          <div class="tav">SA</div>
+          <div>
+            <div class="tn">Siti Amalia</div>
+            <div class="tr">Bandung · Range Rover Sport</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Tesla Model S Plaid kenceng banget! CS 24 jam responsif, booking via website gampang. Paling
+          profesional yang pernah saya coba di Indonesia.</p>
+        <div class="tm">
+          <div class="tav">BP</div>
+          <div>
+            <div class="tn">Budi Prasetyo</div>
+            <div class="tr">Surabaya · Tesla Model S</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Antar ke Bandara Soetta jam 3 pagi, tidak ada biaya tambahan. Range Rover putih kondisi mulus.
+          Sudah rekomendasiin ke semua kolega di kantor saya.</p>
+        <div class="tm">
+          <div class="tav">DK</div>
+          <div>
+            <div class="tn">Dian Kusuma</div>
+            <div class="tr">Jakarta · Range Rover</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Liburan di Bali sewa Lamborghini Urus 3 hari. Foto di Uluwatu kece banget! Staf di Bali sangat
+          helpful dan responsif. Pasti balik lagi bulan depan.</p>
+        <div class="tm">
+          <div class="tav">MF</div>
+          <div>
+            <div class="tn">Muhammad Fauzi</div>
+            <div class="tr">Bali · Lamborghini Urus</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tq">"</div>
+        <p class="tb">Verifikasi KTP dan SIM cuma 10 menit via WhatsApp. Deposit kembali 2 hari setelah pengembalian.
+          Paling profesional dari semua rental yang pernah saya coba.</p>
+        <div class="tm">
+          <div class="tav">NW</div>
+          <div>
+            <div class="tn">Natasha Wijaya</div>
+            <div class="tr">Jakarta · Mercedes AMG GT</div>
+            <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg><svg viewBox="0 0 24 24" fill="#FFD34E">
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+              </svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BLOG ══ -->
+  <section id="blog">
+    <div class="ey">Tips &amp; Insight</div>
+    <h2 class="st">DARI BLOG<br><span class="ac">DRIVEELITE</span></h2>
+    <div class="blog-grid">
+      <div class="blog-card" onclick="openBlog(0)">
+        <div class="blog-img-wrap">
+          <img class="blog-img"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80&auto=format&fit=crop"
+            alt="Blog 1"
+            onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
+          <div class="blog-cat">Tips Sewa</div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>12 Jan 2025</span>
+            <span class="blog-meta-dot"></span>
+            <span>5 menit baca</span>
+          </div>
+          <div class="blog-title">5 Tips Memilih Mobil Sport untuk Perjalanan Bisnis</div>
+          <p class="blog-excerpt">Memilih mobil yang tepat untuk perjalanan bisnis bukan hanya soal gaya — kenyamanan,
+            efisiensi, dan kesan pertama kepada klien juga sangat menentukan.</p>
+          <div class="blog-read" onclick="event.stopPropagation();openBlog(0)">Baca Selengkapnya <svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12,5 19,12 12,19" />
+            </svg></div>
+        </div>
+      </div>
+      <div class="blog-card" onclick="openBlog(1)">
+        <div class="blog-img-wrap">
+          <img class="blog-img"
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Blog 2"
+            onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
+          <div class="blog-cat">Review</div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>8 Jan 2025</span>
+            <span class="blog-meta-dot"></span>
+            <span>7 menit baca</span>
+          </div>
+          <div class="blog-title">Review Lengkap: Lamborghini Urus di Jalanan Bali</div>
+          <p class="blog-excerpt">Bagaimana rasanya menjelajahi Bali dari Seminyak hingga Uluwatu dengan SUV supercar
+            paling ikonik di dunia? Kami coba selama 3 hari penuh.</p>
+          <div class="blog-read" onclick="event.stopPropagation();openBlog(1)">Baca Selengkapnya <svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12,5 19,12 12,19" />
+            </svg></div>
+        </div>
+      </div>
+      <div class="blog-card" onclick="openBlog(2)">
+        <div class="blog-img-wrap">
+          <img class="blog-img"
+            src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80&auto=format&fit=crop" alt="Blog 3"
+            onerror="this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop'">
+          <div class="blog-cat">Electric</div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span>3 Jan 2025</span>
+            <span class="blog-meta-dot"></span>
+            <span>6 menit baca</span>
+          </div>
+          <div class="blog-title">Mengapa Tesla Model S Plaid Jadi Pilihan Favorit 2025</div>
+          <p class="blog-excerpt">Dengan 0–100 km/h hanya 2.1 detik, Tesla Model S Plaid bukan sekadar mobil listrik —
+            ini adalah salah satu kendaraan tercepat yang pernah ada.</p>
+          <div class="blog-read" onclick="event.stopPropagation();openBlog(2)">Baca Selengkapnya <svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12,5 19,12 12,19" />
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <div class="promowrap">
+    <div class="promo">
+      <div>
+        <div class="promo-ey">Penawaran Terbatas</div>
+        <h2>SEWA 3 HARI<br>GRATIS 1 HARI</h2>
+        <p>Berlaku untuk semua armada hingga 30 Juni 2025. Gunakan kode <strong>ELITE30</strong> saat checkout.</p>
+      </div>
+      <div class="promobtns">
+        <a class="pbtn-d"
+          href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20mau%20klaim%20promo%20ELITE30"
+          target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;text-align:center">Klaim
+          Promo</a>
+        <button class="pbtn-o">Syarat &amp; Ketentuan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="contact">
+    <div class="ftop">
+      <div class="fbrand">
+        <a class="logo" href="#">DRIVE<em>ELITE</em></a>
+        <p class="fdesc">Rental mobil premium #1 di Indonesia. Armada mewah, pelayanan bintang lima, harga terjangkau.
+        </p>
+        <!-- Contact Info -->
+        <div class="fcontact">
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z" />
+            </svg>
+            <a href="tel:08111688303">0811 1688 303</a>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+            <span>Jl. Raya Kebun Jeruk No. 10,<br>Kebun Jeruk, Jakarta Barat 11530</span>
+          </div>
+          <div class="fci">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12,6 12,12 16,14" />
+            </svg>
+            <span>Senin–Sabtu: 08.00–20.00<br>Minggu: 09.00–17.00</span>
+          </div>
+        </div>
+        <!-- Social Icons -->
+        <div class="fsocials">
+          <!-- Instagram -->
+          <a class="fsoc" href="#" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a class="fsoc" href="#" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a class="fsoc" href="#" title="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a class="fsoc" href="#" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+              <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="var(--k)" />
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a class="fsoc" href="https://wa.me/628111688303" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Armada</h4>
+        <ul>
+          <li><a href="#">Sports Car</a></li>
+          <li><a href="#">Luxury Sedan</a></li>
+          <li><a href="#">SUV Premium</a></li>
+          <li><a href="#">Electric Car</a></li>
+          <li><a href="#">Hypercar</a></li>
+          <li><a href="#">Van &amp; MPV</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Wedding Car</a></li>
+          <li><a href="#">Corporate Rental</a></li>
+          <li><a href="#">Airport Transfer</a></li>
+          <li><a href="#">Wisata Bali</a></li>
+          <li><a href="#">Antar Kota</a></li>
+          <li><a href="#">Sewa Mingguan</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Kebijakan Sewa</a></li>
+          <li><a href="#">Asuransi</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Kontak Kami</a></li>
+          <li><a href="https://wa.me/628111688303">WhatsApp CS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2025 DriveElite Indonesia. Hak cipta dilindungi.</span>
+      <div class="fpay">
+        <span class="fp">BCA</span><span class="fp">MANDIRI</span><span class="fp">VISA</span><span
+          class="fp">MASTERCARD</span><span class="fp">GOPAY</span><span class="fp">OVO</span><span
+          class="fp">DANA</span>
+      </div>
+      <div class="fleg">
+        <a href="#">Privasi</a><a href="#">Syarat</a><a href="#">Cookie</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- BLOG MODAL -->
+  <div class="blog-mov" id="blog-mov" onclick="if(event.target===this)closeBlog()">
+    <div class="blog-modal" id="blog-modal-inner">
+      <button class="blog-modal-close" onclick="closeBlog()">✕</button>
+      <img id="bm-img" class="blog-modal-hero" src="" alt="">
+      <div class="blog-modal-body">
+        <div id="bm-cat" class="blog-modal-cat"></div>
+        <h2 id="bm-title" class="blog-modal-title"></h2>
+        <div class="blog-modal-meta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          <span id="bm-date"></span>
+          <span>·</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12,6 12,12 16,14" />
+          </svg>
+          <span id="bm-read"></span>
+          <span>·</span>
+          <span id="bm-author"></span>
+        </div>
+        <div id="bm-content" class="blog-modal-content"></div>
+        <a id="bm-cta" class="blog-modal-cta"
+          href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20sewa%20mobil%20setelah%20membaca%20artikel%20di%20blog%20Anda"
+          target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+          </svg>
+          Sewa Mobil Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="mov" id="mov" onclick="if(event.target===this)closeMod()">
+    <div class="modal">
+      <div class="mhead">
+        <h3 id="mtitle">Booking Kendaraan</h3>
+        <button class="mcls" onclick="closeMod()">✕</button>
+      </div>
+      <div class="mbody">
+        <img id="m-car-img" class="m-car-img" src="" alt="">
+        <div class="mspgrid" id="mspecs"></div>
+        <div class="mform">
+          <div class="mff"><label>Kota Pickup</label><select>
+              <option>Jakarta Selatan</option>
+              <option>Jakarta Barat</option>
+              <option>Jakarta Pusat</option>
+              <option>Bali – Denpasar</option>
+              <option>Surabaya</option>
+              <option>Bandung</option>
+            </select></div>
+          <div class="mff"><label>Tanggal Mulai</label><input type="date" id="ms" onchange="calcP()"></div>
+          <div class="mff"><label>Tanggal Selesai</label><input type="date" id="me" onchange="calcP()"></div>
+          <div class="mff"><label>Nama Lengkap</label><input type="text" placeholder="Nama sesuai KTP"></div>
+          <div class="mff"><label>No. WhatsApp</label><input type="tel" placeholder="+62 812 xxxx xxxx"></div>
+          <div class="mff"><label>Lokasi Antar</label><input type="text" placeholder="Hotel / Bandara / Alamat"></div>
+        </div>
+        <div class="mprow">
+          <div>
+            <div class="mpl">Total Estimasi</div>
+            <div id="mdays" style="font-size:11px;color:var(--gr)">Pilih tanggal</div>
+          </div>
+          <div style="text-align:right">
+            <div id="mprice" class="mpv">—</div>
+            <div class="mpsub">inkl. asuransi &amp; BBM</div>
+          </div>
+        </div>
+        <button class="mconfirm" onclick="confirmBooking()">KONFIRMASI BOOKING →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18,15 12,9 6,15" />
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --k:#0B0B0B;--k2:#111111;--k3:#161616;
-  --g:#00E676;--g2:#00FF80;--gg:rgba(0,230,118,.1);--gb:rgba(0,230,118,.2);
+  --g:#92CCBE;--g2:#A3DFD1;--gg:rgba(146,204,190,.1);--gb:rgba(146,204,190,.2);
   --w:#fff;--gr:#666;--gr2:#aaa;
   --b:rgba(255,255,255,.07);--b2:rgba(255,255,255,.14);
   --fd:'Bebas Neue',sans-serif;--fb:'DM Sans',sans-serif;--fm:'Space Mono',monospace;
@@ -136,7 +136,7 @@ section{padding:92px 60px}
 /* ─── HOW ─── */
 .howgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:52px}
 .hw{background:var(--k2);border:1px solid var(--b);padding:34px 24px;transition:.3s}.hw:hover{border-color:var(--gb)}
-.hwn{font-family:var(--fd);font-size:82px;color:rgba(0,230,118,.05);line-height:1;margin-bottom:14px;transition:.3s}.hw:hover .hwn{color:rgba(0,230,118,.14)}
+.hwn{font-family:var(--fd);font-size:82px;color:rgba(146,204,190,.05);line-height:1;margin-bottom:14px;transition:.3s}.hw:hover .hwn{color:rgba(146,204,190,.14)}
 .hw-icon{width:40px;height:40px;margin-bottom:14px;border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hw-icon svg{width:20px;height:20px}
 .hwt{font-family:var(--fd);font-size:19px;letter-spacing:1px;margin-bottom:8px}
