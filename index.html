@@ -21,7 +21,7 @@
     <ul class="nav-links">
       <li><a href="#fleet">Fleet</a></li>
       <li><a href="#how">Cara Sewa</a></li>
-      <li><a href="#why">Keunggulan</a></li>
+
       <li><a href="#locations">Lokasi</a></li>
       <li><a href="#blog">Blog</a></li>
     </ul>
@@ -45,7 +45,7 @@
   <div class="mnav-drawer" id="mnav-drawer">
     <a href="#fleet" onclick="closeMenu()">Fleet</a>
     <a href="#how" onclick="closeMenu()">Cara Sewa</a>
-    <a href="#why" onclick="closeMenu()">Keunggulan</a>
+
     <a href="#locations" onclick="closeMenu()">Lokasi</a>
     <a href="#blog" onclick="closeMenu()">Blog</a>
     <a href="#contact" onclick="closeMenu()">Kontak</a>
@@ -58,7 +58,7 @@
   <div class="hero" id="home">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="badge"><span class="bdot"></span>200+ Kendaraan Premium Tersedia</div>
+        <div class="badge"><span class="bdot"></span>50+ Kendaraan Premium Tersedia</div>
         <h1 class="hero-h">SEWA<br><span class="gc">MOBIL</span><br><span class="oc">IMPIAN</span></h1>
         <p class="hdesc">Pengalaman rental mobil premium di Indonesia. Porsche, BMW, Range Rover, Tesla — siap antar ke
           lokasi Anda, tanpa biaya tersembunyi.</p>
@@ -68,11 +68,11 @@
         </div>
         <div class="kpis">
           <div class="kpi">
-            <div class="kn">200<em>+</em></div>
+            <div class="kn">50<em>+</em></div>
             <div class="kl">Kendaraan</div>
           </div>
           <div class="kpi">
-            <div class="kn">40<em>+</em></div>
+            <div class="kn">3<em>+</em></div>
             <div class="kl">Kota</div>
           </div>
           <div class="kpi">
@@ -80,7 +80,7 @@
             <div class="kl">Rating</div>
           </div>
           <div class="kpi">
-            <div class="kn">12K<em>+</em></div>
+            <div class="kn">1K<em>+</em></div>
             <div class="kl">Pelanggan</div>
           </div>
         </div>
@@ -143,11 +143,10 @@
           </svg>Kategori</label>
         <select>
           <option>Semua Tipe</option>
-          <option>Sports Car</option>
-          <option>Luxury Sedan</option>
-          <option>SUV Premium</option>
-          <option>Electric</option>
-          <option>Hypercar</option>
+          <option>SUV/MPV</option>
+          <option>Mini Bus</option>
+          <option>Medium Bus</option>
+          <option>Big Bus</option>
         </select>
       </div>
       <a class="bgo" href="https://wa.me/628111688303?text=Halo%20DriveElite%2C%20saya%20ingin%20info%20sewa%20mobil"
@@ -182,11 +181,10 @@
     <h2 class="st">PILIH <span class="ac">KENDARAAN</span><br><span class="dim">TERBAIK ANDA</span></h2>
     <div class="filters">
       <button class="ft on" onclick="fc('all',this)">Semua</button>
-      <button class="ft" onclick="fc('sports',this)">Sports</button>
-      <button class="ft" onclick="fc('suv',this)">SUV</button>
-      <button class="ft" onclick="fc('luxury',this)">Luxury</button>
-      <button class="ft" onclick="fc('electric',this)">Electric</button>
-      <button class="ft" onclick="fc('hyper',this)">Hypercar</button>
+      <button class="ft" onclick="fc('suv_mpv',this)">SUV/MPV</button>
+      <button class="ft" onclick="fc('mini_bus',this)">Mini Bus</button>
+      <button class="ft" onclick="fc('medium_bus',this)">Medium Bus</button>
+      <button class="ft" onclick="fc('big_bus',this)">Big Bus</button>
     </div>
     <div class="cgrid" id="cgrid"></div>
     <div class="load-wrap"><button class="loadbtn"
@@ -247,138 +245,15 @@
     </div>
   </section>
 
-  <div class="divider"></div>
 
-  <!-- ══ WHY ══ -->
-  <section id="why">
-    <div class="why-layout">
-      <div>
-        <div class="ey">Keunggulan Kami</div>
-        <h2 class="st" style="margin-bottom:30px">BEDA DARI<br><span class="ac">YANG LAIN</span></h2>
-        <div class="flist">
-          <div class="fi">
-            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg></div>
-            <div>
-              <div class="ft2">Asuransi Comprehensive</div>
-              <p class="fd2">Semua kendaraan dilindungi asuransi all-risk. Tidak perlu kuatir dengan risiko tak terduga
-                selama perjalanan Anda.</p>
-            </div>
-          </div>
-          <div class="fi">
-            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12,6 12,12 16,14" />
-              </svg></div>
-            <div>
-              <div class="ft2">Concierge 24/7</div>
-              <p class="fd2">Tim support kami siap 24 jam, 7 hari seminggu via WhatsApp, telepon, atau live chat —
-                termasuk bantuan darurat di seluruh Indonesia.</p>
-            </div>
-          </div>
-          <div class="fi">
-            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <polyline points="9,11 12,14 22,4" />
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-              </svg></div>
-            <div>
-              <div class="ft2">Kondisi Showroom</div>
-              <p class="fd2">Setiap kendaraan di-detail sebelum diserahkan. Usia armada maksimal 2 tahun, servis rutin
-                terjadwal ketat.</p>
-            </div>
-          </div>
-          <div class="fi">
-            <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <line x1="12" y1="1" x2="12" y2="23" />
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              </svg></div>
-            <div>
-              <div class="ft2">Harga Transparan</div>
-              <p class="fd2">Harga yang Anda lihat adalah harga final. Tanpa biaya tersembunyi, tanpa surcharge bahan
-                bakar, tanpa kejutan.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="bigcard">
-          <img class="bigcard-img"
-            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700&q=85&auto=format&fit=crop" alt="BMW M4"
-            onerror="this.style.display='none'">
-          <div class="bigcard-body">
-            <div class="bclabel">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="#FFD34E">
-                <polygon
-                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
-              </svg>
-              Paling Populer Bulan Ini
-            </div>
-            <div class="bcname">BMW M4 Competition</div>
-            <div class="bcrow">
-              <div class="bcd"><span class="bcdv">510 HP</span><span class="bcdk">Tenaga</span></div>
-              <div class="bcd"><span class="bcdv">3.5 dtk</span><span class="bcdk">0–100 km/h</span></div>
-              <div class="bcd"><span class="bcdv" style="color:var(--g)">Rp 2.2jt</span><span class="bcdk">per
-                  hari</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="minicards">
-          <div class="mc">
-            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <rect x="1" y="3" width="15" height="13" rx="1" />
-                <path d="m16 8 5 0 3 6v3h-8V8z" />
-                <circle cx="5.5" cy="18.5" r="2.5" />
-                <circle cx="18.5" cy="18.5" r="2.5" />
-              </svg></div>
-            <div>
-              <div class="mct">Antar-Jemput</div>
-              <div class="mcd">Hotel &amp; bandara</div>
-            </div>
-          </div>
-          <div class="mc">
-            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                <line x1="12" y1="18" x2="12.01" y2="18" />
-              </svg></div>
-            <div>
-              <div class="mct">Booking Online</div>
-              <div class="mcd">Proses 2 menit</div>
-            </div>
-          </div>
-          <div class="mc">
-            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <path
-                  d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
-              </svg></div>
-            <div>
-              <div class="mct">Keyless Entry</div>
-              <div class="mcd">Sistem digital</div>
-            </div>
-          </div>
-          <div class="mc">
-            <div class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
-                <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
-                <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
-                <path d="M12 3v6" />
-              </svg></div>
-            <div>
-              <div class="mct">Bensin Penuh</div>
-              <div class="mcd">Setiap unit</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- LOCATIONS -->
   <div class="divider"></div>
   <section id="locations">
     <div class="ey">Jaringan Kami</div>
-    <h2 class="st" style="margin-bottom:12px">TERSEDIA DI<br><span class="ac">7 KOTA BESAR</span></h2>
+    <h2 class="st" style="margin-bottom:12px">TERSEDIA DI<br><span class="ac">3 KOTA BESAR</span></h2>
     <p style="color:var(--gr);font-size:14px;margin-bottom:32px">Pickup &amp; dropoff tersedia di semua lokasi. Antar ke
-      hotel &amp; bandara tanpa biaya tambahan.</p>
+      hotel &amp; bandara dengan biaya tambahan.</p>
     <div class="locgrid">
       <div class="lc on">
         <div class="lc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--g)" stroke-width="1.5">
@@ -386,7 +261,7 @@
             <polyline points="9,22 9,12 15,12 15,22" />
           </svg></div>
         <div class="lct">Jakarta</div>
-        <div class="lcc">86 Kendaraan</div>
+        <div class="lcc">20 Kendaraan</div>
         <div class="ldot"></div>
       </div>
       <div class="lc">
@@ -394,7 +269,7 @@
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
             <circle cx="12" cy="9" r="2.5" />
           </svg></div>
-        <div class="lct">Bali</div>
+        <div class="lct">Malang</div>
         <div class="lcc">54 Kendaraan</div>
       </div>
       <div class="lc">
@@ -427,17 +302,16 @@
   <!-- ══ TESTIMONIALS ══ -->
   <section class="tsec" id="testimonials">
     <div class="ey">Yang Mereka Bilang</div>
-    <h2 class="st" style="margin-bottom:38px">12.000+ PELANGGAN<br><span class="ac">PUAS</span></h2>
+    <h2 class="st" style="margin-bottom:38px">4.9 RATING DARI<br><span class="ac">23 ULASAN</span></h2>
     <div class="tgrid">
       <div class="tc">
         <div class="tq">"</div>
-        <p class="tb">Sewa Porsche 911 untuk anniversary, pengalaman luar biasa! Mobilnya bersih banget, proses booking
-          simple, dan driver-nya tepat waktu. Worth every penny!</p>
+        <p class="tb">Udah pernah sewa 2 kali dengan mobil Avanza dan Jazz. Mobil bersih, nyaman dan orang nya ramah ga ribet. Tentunya no tipu tipuu</p>
         <div class="tm">
-          <div class="tav">RH</div>
+          <div class="tav">RN</div>
           <div>
-            <div class="tn">Rafi Hidayat</div>
-            <div class="tr">Jakarta Selatan · Porsche 911</div>
+            <div class="tn">Ryan Nugraha Ramadhan</div>
+            <div class="tr">5 tahun lalu · Avanza & Jazz</div>
             <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
                 <polygon
                   points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
@@ -459,13 +333,12 @@
       </div>
       <div class="tc">
         <div class="tq">"</div>
-        <p class="tb">Sudah langganan DriveElite 2 tahun buat acara pernikahan klien. Armada selalu prima, tidak pernah
-          mengecewakan. Harga kompetitif untuk kualitas sebagus ini.</p>
+        <p class="tb">Ramah dan murah..recomended untuk rental di jakarta. Terima kasih yaaa</p>
         <div class="tm">
-          <div class="tav">SA</div>
+          <div class="tav">ZE</div>
           <div>
-            <div class="tn">Siti Amalia</div>
-            <div class="tr">Bandung · Range Rover Sport</div>
+            <div class="tn">zakcri ekel</div>
+            <div class="tr">setahun lalu · Jakarta</div>
             <div class="t-stars"><svg viewBox="0 0 24 24" fill="#FFD34E">
                 <polygon
                   points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />

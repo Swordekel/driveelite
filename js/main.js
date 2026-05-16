@@ -1,14 +1,15 @@
 // ── CAR DATA ──
 const cars = [
-  { id: 1, name: "Porsche 911", trim: "Carrera 4S · 2024", tag: "sports", tl: "Sport", hp: "450", zero: "3.4s", trans: "PDK", seats: "4", price: "3.500.000", pn: 3500000, img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80&auto=format&fit=crop", hot: true, rat: 4.9, revs: 142 },
-  { id: 2, name: "BMW M4", trim: "Competition xDrive · 2024", tag: "sports", tl: "Sport", hp: "510", zero: "3.5s", trans: "M-DCT", seats: "4", price: "2.200.000", pn: 2200000, img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.8, revs: 118 },
-  { id: 3, name: "Range Rover", trim: "Sport P530 · 2024", tag: "suv", tl: "SUV", hp: "530", zero: "4.3s", trans: "Auto", seats: "7", price: "2.800.000", pn: 2800000, img: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.7, revs: 95 },
-  { id: 4, name: "Tesla Model S", trim: "Plaid · 2024", tag: "electric", tl: "Electric", hp: "1020", zero: "2.1s", trans: "Auto", seats: "5", price: "1.900.000", pn: 1900000, img: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.9, revs: 204 },
-  { id: 5, name: "Mercedes S-Class", trim: "S500 4MATIC · 2024", tag: "luxury", tl: "Luxury", hp: "435", zero: "4.5s", trans: "9G-Auto", seats: "5", price: "2.400.000", pn: 2400000, img: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.8, revs: 77 },
-  { id: 6, name: "Audi RS7", trim: "Sportback · 2024", tag: "sports", tl: "Sport", hp: "600", zero: "3.6s", trans: "Tiptronic", seats: "5", price: "2.600.000", pn: 2600000, img: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.7, revs: 88 },
-  { id: 7, name: "Lamborghini Urus", trim: "Performante · 2024", tag: "hyper", tl: "Hyper", hp: "666", zero: "3.3s", trans: "Auto", seats: "5", price: "8.500.000", pn: 8500000, img: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&q=80&auto=format&fit=crop", hot: true, rat: 5.0, revs: 61 },
-  { id: 8, name: "Mercedes AMG GT", trim: "63 S 4-Door · 2024", tag: "luxury", tl: "Luxury", hp: "630", zero: "3.2s", trans: "MCT", seats: "4", price: "4.200.000", pn: 4200000, img: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.9, revs: 53 },
-  { id: 9, name: "BMW X7", trim: "M60i xDrive · 2024", tag: "suv", tl: "SUV", hp: "530", zero: "4.5s", trans: "Auto", seats: "7", price: "2.100.000", pn: 2100000, img: "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80&auto=format&fit=crop", hot: false, rat: 4.6, revs: 72 },
+  { id: 1, name: "Toyota Avanza", trim: "1.5 G CVT", tag: "suv_mpv", tl: "MPV", hp: "106", zero: "12.5s", trans: "CVT", seats: "7", price: "450.000", pn: 450000, img: "pictcar/TOYOTA%20AVANZA.jpeg", hot: true, rat: 4.8, revs: 142 },
+  { id: 2, name: "Daihatsu Xenia", trim: "1.5 R CVT", tag: "suv_mpv", tl: "MPV", hp: "106", zero: "12.5s", trans: "CVT", seats: "7", price: "450.000", pn: 450000, img: "pictcar/DAIHATSU%20XENIA.jpeg", hot: false, rat: 4.7, revs: 89 },
+  { id: 3, name: "Toyota Innova Reborn", trim: "2.4 V Diesel", tag: "suv_mpv", tl: "MPV", hp: "149", zero: "11.2s", trans: "Auto", seats: "7", price: "800.000", pn: 800000, img: "pictcar/TOYOTA%20INNOVA%20REBORN.jpeg", hot: true, rat: 4.9, revs: 215 },
+  { id: 4, name: "Toyota Innova Zenix", trim: "2.0 Q Hybrid", tag: "suv_mpv", tl: "MPV", hp: "186", zero: "9.5s", trans: "e-CVT", seats: "7", price: "1.200.000", pn: 1200000, img: "pictcar/TOYOTA%20INNOVA%20ZENIX.jpeg", hot: true, rat: 5.0, revs: 134 },
+  { id: 5, name: "Toyota Alphard", trim: "2.5 G AT", tag: "suv_mpv", tl: "Luxury MPV", hp: "180", zero: "10.5s", trans: "CVT", seats: "7", price: "2.500.000", pn: 2500000, img: "pictcar/TOYOTA%20ALPHARD.jpeg", hot: true, rat: 4.9, revs: 342 },
+  { id: 6, name: "Toyota Fortuner", trim: "2.8 VRZ Diesel", tag: "suv_mpv", tl: "SUV", hp: "201", zero: "10.2s", trans: "Auto", seats: "7", price: "1.500.000", pn: 1500000, img: "pictcar/TOYOTA%20FORTUNER.jpeg", hot: false, rat: 4.8, revs: 188 },
+  { id: 7, name: "Toyota Hiace", trim: "Commuter", tag: "mini_bus", tl: "Mini Bus", hp: "136", zero: "-", trans: "Manual", seats: "15", price: "1.400.000", pn: 1400000, img: "pictcar/TOYOTA%20HIACE.jpeg", hot: true, rat: 4.7, revs: 92 },
+  { id: 8, name: "Isuzu Elf", trim: "Long NLR", tag: "mini_bus", tl: "Mini Bus", hp: "100", zero: "-", trans: "Manual", seats: "19", price: "1.600.000", pn: 1600000, img: "pictcar/ISUZU%20ELF.jpeg", hot: false, rat: 4.6, revs: 55 },
+  { id: 9, name: "Medium Bus", trim: "Pariwisata", tag: "medium_bus", tl: "Bus", hp: "260", zero: "-", trans: "Manual", seats: "31", price: "2.500.000", pn: 2500000, img: "pictcar/MEDIUM%20BUS.jpeg", hot: false, rat: 4.8, revs: 112 },
+  { id: 10, name: "Big Bus", trim: "Pariwisata SHD", tag: "big_bus", tl: "Bus", hp: "380", zero: "-", trans: "Manual", seats: "59", price: "3.800.000", pn: 3800000, img: "pictcar/BIG%20BUS.jpeg", hot: false, rat: 4.9, revs: 87 }
 ];
 
 const STAR_SVG = `<svg viewBox="0 0 24 24" fill="#FFD34E" width="11" height="11"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`;
@@ -16,7 +17,7 @@ const HEART_OFF = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--gr)" strok
 const HEART_ON = `<svg viewBox="0 0 24 24" fill="#FF6B6B" stroke="#FF6B6B" stroke-width="1.5" width="16" height="16"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`;
 const FALLBACK = 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=70&auto=format&fit=crop';
 
-function tagCls(t) { return { sports: 's', suv: 'u', luxury: 'l', electric: 'e', hyper: 'h' }[t] || 'u' }
+function tagCls(t) { return { suv_mpv: 'u', mini_bus: 's', medium_bus: 'l', big_bus: 'h' }[t] || 'u' }
 
 const favs = new Set();
 function toggleFav(id, btn) {
@@ -49,7 +50,6 @@ function render(filter) {
           <span class="tag ${tagCls(c.tag)}">${c.tl}</span>
           <button class="fav-btn${isFav ? ' active' : ''}" onclick="event.stopPropagation();toggleFav(${c.id},this)" title="Favorit">${isFav ? HEART_ON : HEART_OFF}</button>
         </div>
-        <div class="rat"><div class="rat-stars">${STAR_SVG.repeat(5)}</div>${c.rat} (${c.revs} ulasan)</div>
         <div class="cname">${c.name}</div>
         <div class="ctrim">${c.trim}</div>
         <div class="cspecs">
