@@ -115,7 +115,7 @@ function confirmBooking() {
   const total = (curCar.pn * days).toLocaleString('id-ID');
   const msg = `Halo TWHRENTCAR, saya ingin booking:%0A%0A🚗 *${curCar.name} ${curCar.trim}*%0A📅 Tanggal: ${sd} s/d ${ed} (${days} hari)%0A📍 Kota Pickup: ${kota}%0A🏨 Lokasi Antar: ${loc}%0A👤 Nama: ${nm}%0A📱 No. HP: ${ph}%0A💰 Total Estimasi: Rp ${total}%0A%0AMohon konfirmasi ketersediaan. Terima kasih!`;
   closeMod();
-  window.open('https://wa.me/628111688303?text=' + msg, '_blank');
+  window.open('https://wa.me/6281290608190?text=' + msg, '_blank');
 }
 
 function showToast(msg) {
@@ -171,7 +171,7 @@ const blogs = [
     title: '5 Tips Memilih Mobil Sport untuk Perjalanan Bisnis',
     date: '12 Januari 2025',
     read: '5 menit baca',
-    author: 'Tim DriveElite',
+    author: 'Tim TWHRENTCAR',
     img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=85&auto=format&fit=crop',
     content: `
       <p>Memilih kendaraan yang tepat untuk perjalanan bisnis bukan hanya soal gaya semata — kenyamanan selama berkendara, efisiensi waktu, dan kesan pertama kepada klien juga sangat menentukan kesuksesan pertemuan Anda.</p>
@@ -189,8 +189,8 @@ const blogs = [
         <li>Wireless charging untuk perangkat Anda</li>
       </ul>
       <h3>5. Cek Ketersediaan dan Antar-Jemput</h3>
-      <p>Pilih penyedia rental yang menawarkan layanan antar-jemput ke hotel atau bandara. DriveElite menyediakan layanan ini 24/7 tanpa biaya tambahan di semua kota besar Indonesia. Dengan armada terawat dan pengemudi profesional opsional, perjalanan bisnis Anda akan berjalan sempurna.</p>
-      <p>Siap memilih kendaraan terbaik untuk perjalanan bisnis Anda berikutnya? Hubungi tim DriveElite melalui WhatsApp dan kami akan membantu Anda menemukan pilihan yang tepat.</p>
+      <p>Pilih penyedia rental yang menawarkan layanan antar-jemput ke hotel atau bandara. TWHRENTCAR menyediakan layanan ini 24/7 tanpa biaya tambahan di semua kota besar Indonesia. Dengan armada terawat dan pengemudi profesional opsional, perjalanan bisnis Anda akan berjalan sempurna.</p>
+      <p>Siap memilih kendaraan terbaik untuk perjalanan bisnis Anda berikutnya? Hubungi tim TWHRENTCAR melalui WhatsApp dan kami akan membantu Anda menemukan pilihan yang tepat.</p>
     `
   },
   {
@@ -199,7 +199,7 @@ const blogs = [
     title: 'Review Lengkap: Lamborghini Urus di Jalanan Bali',
     date: '8 Januari 2025',
     read: '7 menit baca',
-    author: 'Redaksi DriveElite',
+    author: 'Redaksi TWHRENTCAR',
     img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85&auto=format&fit=crop',
     content: `
       <p>Ketika kami mendapat kesempatan mengendarai Lamborghini Urus selama 3 hari di Bali — dari keramaian Seminyak, menyusuri tebing dramatis Uluwatu, hingga menembus jalan-jalan menanjak Kintamani — kami tahu ini akan menjadi pengalaman yang sulit dilupakan.</p>
@@ -217,7 +217,7 @@ const blogs = [
       <h3>Kenyamanan Harian yang Mengejutkan</h3>
       <p>Berbeda dengan supercar konvensional, Urus terasa mengejutkan nyaman untuk pemakaian sehari-hari. Suspensi pneumatik adaptif menyerap polisi tidur dengan baik, visibilitas cukup baik untuk kendaraan sebesar ini, dan sistem parkir 360° membantu manuver di parkiran sempit vila.</p>
       <h3>Verdict: Layak Setiap Rupiahnya</h3>
-      <p>Dengan harga sewa Rp 8.5 juta per hari dari DriveElite, Lamborghini Urus menawarkan pengalaman berkendara yang tidak tertandingi di segmen SUV manapun. Jika Anda mengunjungi Bali dan ingin membuat momen yang benar-benar tak terlupakan, ini adalah pilihan yang tidak akan Anda sesali.</p>
+      <p>Dengan harga sewa Rp 8.5 juta per hari dari TWHRENTCAR, Lamborghini Urus menawarkan pengalaman berkendara yang tidak tertandingi di segmen SUV manapun. Jika Anda mengunjungi Bali dan ingin membuat momen yang benar-benar tak terlupakan, ini adalah pilihan yang tidak akan Anda sesali.</p>
     `
   },
   {
@@ -226,10 +226,10 @@ const blogs = [
     title: 'Mengapa Tesla Model S Plaid Jadi Pilihan Favorit 2025',
     date: '3 Januari 2025',
     read: '6 menit baca',
-    author: 'Tim Teknologi DriveElite',
+    author: 'Tim Teknologi TWHRENTCAR',
     img: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&q=85&auto=format&fit=crop',
     content: `
-      <p>Dalam daftar armada DriveElite, Tesla Model S Plaid secara konsisten menjadi kendaraan yang paling sering dipesan ulang oleh pelanggan yang pernah mencobanya. Bukan tanpa alasan — ini adalah salah satu kendaraan produksi tercepat yang pernah dibuat manusia.</p>
+      <p>Dalam daftar armada TWHRENTCAR, Tesla Model S Plaid secara konsisten menjadi kendaraan yang paling sering dipesan ulang oleh pelanggan yang pernah mencobanya. Bukan tanpa alasan — ini adalah salah satu kendaraan produksi tercepat yang pernah dibuat manusia.</p>
       <h3>Angka yang Tidak Masuk Akal (Tapi Nyata)</h3>
       <p>0–100 km/h dalam 2.1 detik. Bukan 2.1 detik di sirkuit dengan ban balap dan kondisi ideal — tapi di jalan biasa, dengan AC menyala, dari kondisi diam sempurna. Ini lebih cepat dari Ferrari 488, lebih cepat dari Lamborghini Huracán, dan hampir secepat Bugatti Chiron.</p>
       <ul>
@@ -243,7 +243,7 @@ const blogs = [
       <p>Layar utama 17 inci portrait mendominasi dasbor. Tidak ada tombol fisik yang tidak perlu — semua dikendalikan lewat layar sentuh ultra-responsif. Sistem audio 22-speaker Burmester mengisi kabin dengan kualitas suara yang membuat konser terasa kalah.</p>
       <h3>Mengapa Lebih Baik dari Mobil Sport Konvensional?</h3>
       <p>Tidak ada getaran mesin, tidak ada bau knalpot, tidak ada panas dari transmisi. Akselerasi tersedia instan tanpa perlu downshift atau menunggu turbo spool. Setelah mencoba Plaid, banyak pengemudi yang mengatakan mobil bensin terasa "lambat" dan "kasar" — bahkan yang bertenaga 600 HP sekalipun.</p>
-      <h3>Tersedia di DriveElite</h3>
+      <h3>Tersedia di TWHRENTCAR</h3>
       <p>Tesla Model S Plaid tersedia di Jakarta, Bali, dan Surabaya dengan tarif mulai Rp 1.9 juta per hari. Setiap unit dilengkapi dengan pengisian baterai penuh dan akses ke jaringan Supercharger Tesla. Pesan sekarang melalui WhatsApp untuk ketersediaan unit.</p>
     `
   }
