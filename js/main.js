@@ -268,3 +268,28 @@ function closeBlog() {
   document.getElementById('blog-mov').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ── HERO SLIDESHOW ──
+let currentHeroIndex = 0;
+function cycleHeroImage() {
+  if (!cars || cars.length === 0) return;
+  currentHeroIndex = (currentHeroIndex + 1) % cars.length;
+  const car = cars[currentHeroIndex];
+  const heroImg = document.getElementById('hero-img');
+  const heroName = document.getElementById('hero-badge-name');
+  const heroDesc = document.getElementById('hero-badge-desc');
+  
+  if (heroImg && heroName && heroDesc) {
+    // Fade out
+    heroImg.style.opacity = 0;
+    setTimeout(() => {
+      heroImg.src = car.img;
+      heroImg.alt = car.name;
+      heroName.textContent = car.name;
+      heroDesc.textContent = `${car.trim} · ${car.seats} Kursi · Mulai Rp ${car.price}/hari`;
+      // Fade in
+      heroImg.style.opacity = 1;
+    }, 500);
+  }
+}
+setInterval(cycleHeroImage, 10000);
