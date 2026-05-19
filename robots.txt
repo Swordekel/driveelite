@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://twhrentcar.vercel.app/sitemap.xml
+
+# Blokir file yang tidak perlu diindex
+Disallow: /css/
+Disallow: /js/
+Disallow: /pictcar/
