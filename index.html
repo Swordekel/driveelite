@@ -49,11 +49,18 @@
   <!-- ══ GOOGLE SITE VERIFICATION ══ -->
   <meta name="google-site-verification" content="9gL2tKgtHNhdStXDPxCgOnIVfQBGf971LLXL4w3vFeE">
 
-  <!-- ══ STRUCTURED DATA — JSON-LD (LocalBusiness + FAQ) ══ -->
+  <!-- ══ STRUCTURED DATA — JSON-LD (WebSite + LocalBusiness + FAQ) ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://twhrentcar.vercel.app/#website",
+        "name": "TWH Rent Car",
+        "alternateName": "TWHRENTCAR",
+        "url": "https://twhrentcar.vercel.app/"
+      },
       {
         "@type": "LocalBusiness",
         "@id": "https://twhrentcar.vercel.app/#business",
